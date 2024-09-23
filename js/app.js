@@ -16,3 +16,17 @@ function throwDice () {
   return Math.floor(Math.random() * 6) + 1;
 }
 
+function updateScore () {
+  if (playerResult === computerResult) {
+    gameResult.innerHTML = "It's a tie!";
+    ties++;
+  } else {
+    gameResult.innerHTML = playerResult < computerResult ? "Computer wins!": "You win!";
+    playerResult < computerResult ? loses++ : wins++;
+  }
+  win.innerHTML = "Won: " + wins;
+  lose.innerHTML = "Lose: " + loses;
+  tie.innerHTML = "Won: " + ties;
+}
+
+
