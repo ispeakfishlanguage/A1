@@ -30,3 +30,12 @@ function updateScore () {
 }
 
 
+dice.addEventListener('click', () =>{
+  playerResult = throwDice();
+  playerScore.innerHTML = playerResult;
+  computerResult = throwDice();
+  computerScore.innerHTML = computerResult;
+  updateScore();
+});
+
+
