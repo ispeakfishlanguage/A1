@@ -12,3 +12,7 @@ let wins = 0;
 let loses = 0;
 let ties = 0;
 
+function throwDice () {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
